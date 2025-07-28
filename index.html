@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyra - Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a192f;
+            --secondary-dark: #112240;
+            --accent-color: #64ffda;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--primary-dark);
+            color: var(--text-primary);
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(204, 214, 246, 0.08) 1px, transparent 0),
+                linear-gradient(-45deg, #020617, #0f172a, #020617, #1e293b);
+            background-size: 40px 40px, 400% 400%;
+            animation: gradient 20s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: rgba(17, 34, 64, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-weight: bold;
+            font-size: 24px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--text-primary);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .form-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .email-input {
+            flex-grow: 1;
+            padding: 14px;
+            border-radius: 6px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            background-color: var(--secondary-dark);
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .email-input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .submit-btn {
+            padding: 14px 24px;
+            border-radius: 6px;
+            border: none;
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">C</div>
+            <div class="logo-text">Cyra</div>
+        </div>
+        <h1>The Future of Cybersecurity is Conversational.</h1>
+        <p>
+            Cyra, your personal AI security companion, is launching soon. Get early access and be the first to experience a smarter way to stay secure.
+        </p>
+        
+        <!-- This is now a real, functional form that sends data to Formspree -->
+        <form class="form-container" action="https://formspree.io/f/mrblkery" method="POST">
+            <input type="email" name="email" class="email-input" placeholder="Enter your email address" required>
+            <button type="submit" class="submit-btn">Join Waitlist</button>
+        </form>
+
+        <p class="footer">© 2025 Cyra Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>
